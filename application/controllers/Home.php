@@ -10,7 +10,7 @@ class Home extends CI_Controller {
 		foreach ($query->result() as $row) {
 			$dog         = new Dog();
 			$dog->name   = $row->name;
-			$dog->age    = $row->age;
+			$dog->age    = (int) $row->age;
 			$dog->color  = $row->color;
 			$obj->data[] = $dog;
 
@@ -21,7 +21,6 @@ class Home extends CI_Controller {
 
 		}
 		$obj->code = 100;
-
 		echo json_encode($obj);
 
 	}
