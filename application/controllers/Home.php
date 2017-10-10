@@ -24,6 +24,7 @@ class Home extends CI_Controller {
 		echo json_encode($obj);
 
 	}
+
 }
 class ServerResponse {
 	public $code = 0;
